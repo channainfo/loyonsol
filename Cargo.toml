@@ -1,0 +1,11 @@
+[package]
+name = "loy"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "loy"
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+solana-program = "1.18.12"
