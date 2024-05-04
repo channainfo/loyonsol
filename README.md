@@ -62,7 +62,9 @@ Tell solana to use the wallet
 solana config set -k ~/.config/solana/id.json
 ```
 
-Topup some sol to your wallet
+### Airdrop
+
+#### Using our local testnet
 
 ```sh
 # airdrop 2 sols
@@ -71,6 +73,29 @@ solana airdrop 2
 # verify your balance
 solana balance
 ```
+
+#### Using Public cluster
+
+Here is the devnet endpoint: <https://api.devnet.solana.com>. We can just switch the Solana CLI to connect to the devnet
+
+```sh
+solana config set --url https://api.devnet.solana.com
+
+# verify it
+solana config get
+```
+
+Now you can perform the solana command as usual, for example, to airdrop 5 sol to your own account
+
+```sh
+solana airdrop 5
+
+```
+
+Public clusters:
+
+- Test: <https://api.testnet.solana.com>
+- Dev: <https://api.devnet.solana.com>
 
 ### Build the project
 
@@ -94,5 +119,6 @@ Now you can deploy your program to the chain
 
 solana program deploy ./target/deploy/loy.so
 # > Program Id: CPdff6rNwxkgEQDGQoqztqzrKwGTJKkvmMHjha9yRvmw
-
 ```
+
+Go to <https://solscan.io/> and search for your program by the program id above
