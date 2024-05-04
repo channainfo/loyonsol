@@ -122,3 +122,24 @@ solana program deploy ./target/deploy/loy.so
 ```
 
 Go to <https://solscan.io/> and search for your program by the program id above
+
+## Anchor Framework
+
+Our project is based on the Anchor framework located under the anchor directory.
+
+```sh
+# init the anchor project
+anchor init loyonsol
+
+# rename the folder to anchor and cd to the it
+cd anchor
+
+# build the app
+anchor build
+
+# run test
+anchor test
+
+# show the list
+anchor keys list
+```
